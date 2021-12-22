@@ -1,0 +1,158 @@
+.top{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.topLeft{
+    flex: 3;
+    display: flex;
+    padding-left: 10px;
+}
+.topRight{
+    flex: 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.link{
+
+    text-decoration: none;
+}
+
+.menu{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+.menu li .link{
+    padding: 10px 15px;
+    color: #6c707c;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.logo{
+    font-size: 26px;
+    font-weight: bold;
+    color: #6c707c;
+    font-family: Poppins;
+}
+.logo:hover{
+    color: #17d1ac;
+    text-decoration: none;
+}
+.menu li .link:hover, 
+.menu li .link.active{
+    background-color: #17d1ac;
+    color: #FFFFFF !important;
+    font-weight: 700;
+    transition: all ease 0.4s;
+    text-decoration: none;
+}
+
+.topCenter{
+    flex: 6;
+}
+
+.topIcon{
+    font-size: 20px;
+    margin-right: 10px;
+    color: #444;
+    cursor: pointer;
+}
+
+.topImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.topList{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topListItem{
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.topSearchIcon{
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.topCenterSmall{
+    display: none;
+}
+@media(max-width: 900px){
+    .toggle{
+        display: block;
+    }
+    .deletable{
+        display: none;
+    }
+    .toggle:before{
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 0px;
+        margin-left: -35px;
+    }
+    .toggle.active::before{
+        content:'\f00d';
+    }
+    .topCenter{
+        padding: 10px 30px;
+        display: none;
+    }
+    .topCenterSmall{
+        display: block;
+    }
+    .topCenterSmall ul{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        background-color: #0f0f0f;
+        top: 50px;
+        left:0;
+        transition: 0.5s;
+        overflow: hidden;
+        border: 3px solid #1f1f1f;
+        display: none ;
+        margin: 0px;
+        padding: 0px;
+    }
+    .topCenterSmall ul li .link{
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    .active-menu{
+        display: block !important;
+        z-index: 9999;
+        background-color: black;
+    }
+    
+}
