@@ -5,7 +5,7 @@ import Sidebar from "../../components/sidebar/Sidebar"
 import "./home.css";
 import axios from "axios";
 import { useLocation } from "react-router";
-const server = "http://localhost:5000/api"
+const server = "https://stark-falls-12636.herokuapp.com/api"
 export default function Home() {
     const [posts, setPosts] = useState([]);
     const {search} = useLocation();

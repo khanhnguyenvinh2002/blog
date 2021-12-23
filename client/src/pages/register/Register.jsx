@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import "./register.css"
 
-const server = "http://localhost:5000/api"
+const server = "https://stark-falls-12636.herokuapp.com/api"
 
 export default function Register() {
     const [username, setUsername] = useState("");

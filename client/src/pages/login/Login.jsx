@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { Context } from "../../context/Context";
 import "./login.css"
 
-const server = "http://localhost:5000/api"
+const server = "https://stark-falls-12636.herokuapp.com/api"
 
 export default function Login() {
 

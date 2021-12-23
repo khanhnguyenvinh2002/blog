@@ -2,10 +2,10 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import "./sidebar.css"
-const server = "http://localhost:5000/api"
+const server = "https://stark-falls-12636.herokuapp.com/api"
 
 export default function Sidebar() {
-    const PF = "http://localhost:5000/images/"
+    const PF = "https://stark-falls-12636.herokuapp.com/images/"
     const [cats, setCats] = useState([]);
 
     useEffect(()=>{

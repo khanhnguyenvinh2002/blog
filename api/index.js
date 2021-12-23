@@ -4,6 +4,7 @@ const cors = require("cors")
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const path = require("path")
+const port = process.env.PORT || 5000;
 dotenv.config();
 app.use(cors());
 //enable sending json files
@@ -36,6 +37,6 @@ app.use("/api/users", usersRoute);
 app.use("/api/posts", postsRoute);
 app.use("/api/categories", categoriesRoute);
 
-app.listen("5000",()=>{
+app.listen(port,()=>{
     console.log("backend is running.")
 })

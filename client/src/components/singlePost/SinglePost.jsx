@@ -1,17 +1,18 @@
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router"
-import ReactMarkdown from 'react-markdown'
+import Markdown from 'react-markdown'
 import "./singlePost.css"
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
-const server = "http://localhost:5000/api"
+
+const server = "https://stark-falls-12636.herokuapp.com/api"
 export default function SinglePost() {
     const location = useLocation();
     const path = location.pathname.split("/")[2];
     const [post, setPost]= useState({});
     const {user} = useContext(Context);
-    const PF = "http://localhost:5000/images/"
+    const PF = "https://stark-falls-12636.herokuapp.com/images/"
     const [title, setTitle]=useState("")
     const [desc, setDesc]=useState("")
     const [content, setContent]=useState("")
@@ -46,6 +47,19 @@ export default function SinglePost() {
 
         }
     }
+
+    function flatten(text, child) {
+        return typeof child === 'string'
+          ? text + child
+          : React.Children.toArray(child.props.children).reduce(flatten, text)
+      }
+      
+      function HeadingRenderer(props) {
+        var children = React.Children.toArray(props.children)
+        var text = children.reduce(flatten, '')
+        var slug = text.toLowerCase().replace(/\W/g, '-')
+        return React.createElement('h' + props.level, {id: slug}, props.children)
+      }
     return (
         <div className="singlePost col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
             <div className="singlePostWrapper">
@@ -92,7 +106,7 @@ export default function SinglePost() {
                     value={desc} 
                     onChange={(e)=>setDesc(e.target.value)}/>
                 : 
-                <ReactMarkdown className="singlePostDesc">{desc}</ReactMarkdown>}
+                <Markdown className="singlePostDesc" components={{h1: HeadingRenderer, h2: HeadingRenderer, h3: HeadingRenderer}}>{desc}</Markdown>}
 
                 {updateMode ? 
                 <textarea 
@@ -100,7 +114,8 @@ export default function SinglePost() {
                     value={content} 
                     onChange={(e)=>setContent(e.target.value)}/>
                 : 
-                <ReactMarkdown className="singlePostContent">{content}</ReactMarkdown>}
+                <Markdown className="singlePostContent" 
+                components={{h1: HeadingRenderer, h2: HeadingRenderer, h3: HeadingRenderer}}>{content}</Markdown>}
                 {updateMode 
                 && 
                 <button className="singlePostButton" onClick={handleUpdate}>Update</button>

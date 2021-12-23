@@ -4,8 +4,8 @@ import { unstable_HistoryRouter } from "react-router-dom";
 import Sidebar from "../../components/sidebar/Sidebar"
 import { Context } from "../../context/Context"
 import "./settings.css"
-const server = "http://localhost:5000/api"
-const PF = "http://localhost:5000/images/"
+const server = "https://stark-falls-12636.herokuapp.com/api"
+const PF = "https://stark-falls-12636.herokuapp.com/images/"
 export default function Settings() {
     const [file, setFile] = useState(null);
     const [username, setUsername] = useState("");
