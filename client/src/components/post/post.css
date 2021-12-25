@@ -1,7 +1,7 @@
 .post{
     width: 100%;
     max-width: 100%;
-    border-bottom: 1px solid #6c707c;
+    border-bottom: 1px solid #d3d3d399;
 }
 
 .postImg{
@@ -65,4 +65,9 @@
     max-width: 90%;
     word-wrap:break-word;
 
+}
+
+.postDesc:hover{
+    opacity: 0.6;
+    transition: all ease 0.3s;
 }

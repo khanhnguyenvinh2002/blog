@@ -1,13 +1,13 @@
-/* .singlePost{
+/* .portfolio{
 
 } */
-.singlePostWrapper{
+.portfolioWrapper{
     padding: 0;
     display: flex;
     flex-direction: column;
 }
 
-.singlePostTitle{
+.portfolioTitle{
     margin: 0;
     margin-top: 30px;
     color: #0a0a23;
@@ -15,42 +15,43 @@
     font-weight: 700;
 }
 
-.singlePostTitleInput{
+.portfolioTitleInput{
     margin: 10px;
     font-size: 28px;
     border: none;
     color: #666;
     border-bottom: 1px solid lightgrey;
 }
-.singlePostTitleInput:focus{
+.portfolioTitleInput:focus{
     outline: none;
 }
-.singlePostImg{
+.portfolioImg{
     width: 100%;
     height: auto;
     max-height: 60vh;
     border-radius: 5px;
-    object-fit: cover;
+    object-fit: contain;
+    margin: 20px 0;
 }
 
-.singlePostInfo{
+.portfolioInfo{
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
     font-size: 16px;
     color: #b39656;
 }
-.singlePostAuthor{
+.portfolioAuthor{
     font-size: 2rem;
 }
 
-.singlePostCats{
+.portfolioCats{
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
-.singlePostCat{
+.portfolioCat{
     font-size: 1rem;
     color: #be9656;
     line-height: 20px;
@@ -60,23 +61,23 @@
     border-radius: 20px;
     padding: 5px 10px;
 }
-.singlePostEdit{
+.portfolioEdit{
     float: right;
     font-size: 16px;
 }
 
-.singlePostIcon{
+.portfolioIcon{
     margin-left: 10px;
     cursor: pointer;
 }
 
-.singlePostIcon:first-child{
+.portfolioIcon:first-child{
     color: teal;
 }
-.singlePostIcon:last-child{
+.portfolioIcon:last-child{
     color: tomato;
 }
-.singlePostDesc{
+.portfolioDesc{
     color: black;
     font-size: 2.75rem;
     line-height: 1.6em;
@@ -85,23 +86,23 @@
     font-weight: bold;
     font-style: italic;
 }
-.singlePostDesc::first-letter{
+.portfolioDesc::first-letter{
     /* margin-left: 20px; */
     text-transform: uppercase;
 }
 
-.singlePostDescInput{
+.portfolioDescInput{
     border: none;
     color: #666;
     font-size: 18px;
     line-height: 25px;
 }
-.singlePostDescInput:focus{
+.portfolioDescInput:focus{
     outline: none;
 }
 
 
-.singlePostContent{
+.portfolioContent{
     color: black;
     font-size: 2.2rem;
     line-height: 1.6em;
@@ -109,23 +110,23 @@
     max-width:100%;
     word-wrap:break-word;
 }
-.singlePostContent::first-letter{
+.portfolioContent::first-letter{
     /* margin-left: 20px; */
     text-transform: uppercase;
 }
 
-.singlePostContentInput{
+.portfolioContentInput{
     border: none;
     color: #666;
     font-size: 18px;
     line-height: 25px;
     height: 60vh;
 }
-.singlePostContentInput:focus{
+.portfolioContentInput:focus{
     outline: none;
 }
 
-.singlePostButton{
+.portfolioButton{
     width: 100px;
     border: none;
     background-color: teal;
@@ -141,18 +142,25 @@
     font-size: 12px;
 }
 
-p img{
-    width: 650px;
-    object-fit:contain;
-    max-width: 100%;
+p{
+    margin: 20px 0;
 }
 
+img{
+    width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+}
+h1{
+    font-weight: 800;
+    font-size: 2em;
+}
 @media (max-width: 800px){
-.singlePostContent {
+.portfolioContent {
     font-size: 1.9rem;
 }}
 
 @media (max-width: 500px){
-.singlePostTitle {
+.portfolioTitle {
     font-size: 2.9rem;
 }}

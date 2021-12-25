@@ -61,15 +61,10 @@ export default function SinglePost() {
         return React.createElement('h' + props.level, {id: slug}, props.children)
       }
     return (
-        <div className="singlePost col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12">
+        <div className="singlePost container">
             <div className="singlePostWrapper">
-                {post.photo &&
-                <img 
-                    className="singlePostImg"
-                    src={PF + post.photo}
-                    alt="" 
-                />}
-                {
+                
+            {
                     updateMode ? 
                     <input 
                         type="text" 
@@ -77,24 +72,36 @@ export default function SinglePost() {
                         className="singlePostTitleInput"
                         onChange={(e)=>setTitle(e.target.value)}/> : (
                         <h1 className="singlePostTitle">
-                        {title}
-                        {post.username ===user?.username &&
-                        <div className="singlePostEdit">
-                            <i className="singlePostIcon far fa-edit" onClick={()=>{
-                                setUpdateMode(true)
-                            }}></i>
-                            <i className="singlePostIcon far fa-trash-alt" onClick={handleDelete}></i>
-                        </div>}
-    
-                    </h1>
+                            {title}
+                            {post.username ===user?.username &&
+                            <div className="singlePostEdit">
+                                <i className="singlePostIcon far fa-edit" onClick={()=>{
+                                    setUpdateMode(true)
+                                }}></i>
+                                {/* <i className="singlePostIcon far fa-trash-alt" onClick={handleDelete}></i> */}
+                            </div>}
+        
+                        </h1>
                     )
                 }
-               
+
+
                 <div className="singlePostInfo">
-                    <span className="singlePostAuthor">Author: <Link to={`/?user=${post.username}`} className="link"><b>{post.username}</b>
-                    </Link></span>
+                    <span className="singlePostAuthor">
+                         <b>by Andrew Nguyen</b>
+                        {/* Author: <Link to={`/?user=${post.username}`} className="link"><b>{post.username}</b> 
+                    </Link>*/}
+                    </span>
                     <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>
                 </div>
+
+                {post.photo &&
+                <img 
+                    className="singlePostImg"
+                    src={PF + post.photo}
+                    alt="" 
+                />}
+               
                 <div className="singlePostCats">
                     {post.categories?.map(c=>(
                     <div className="singlePostCat">{c}</div>

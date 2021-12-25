@@ -12,15 +12,18 @@ export default function Post({post}) {
                 </span></Link>
             </div>
 
-            <div className="postCats">
+            {post.categories && post.categories.length > 0 && <div className="postCats">
                 {post.categories?.map((c,i)=>(
                 <div className="postCat" key={i}>{c}</div>
                 ))}
             </div>
-            <span className="postDesc">
-                {post.desc}
-            </span>
-            <p className="postDate">{"Created by " + post.username + " at "+ new Date(post.createdAt).toDateString()}</p>
+            }
+            <Link to={`/post/${post._id}`} className="link">
+                <span className="postDesc">
+                    {post.desc}
+                </span>
+            </Link>
+            <p className="postDate">{"Created by " + post.username + " on "+ new Date(post.createdAt).toDateString()}</p>
         </div>
     )
 }

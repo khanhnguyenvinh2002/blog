@@ -71,6 +71,7 @@
 
 .sidebarListItem:hover{
     opacity: 0.5;
+    transition: all ease 0.3s;
 }
 .sidebarSocial{
     margin-top: 15px;
@@ -89,4 +90,5 @@
 .sidebarIcon:hover{
     opacity: 0.5;
     color: #17d1ac;
+    transition: all ease 0.3s;
 }

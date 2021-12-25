@@ -1,4 +1,4 @@
-import React, { useContext , useState} from 'react'
+import React, { useContext , useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import "./topbar.css"
@@ -7,8 +7,35 @@ const PF = "https://stark-falls-12636.herokuapp.com/images/"
 export default function TopBar() {
     const {user, dispatch} = useContext(Context);
     const [toggled, setToggled] = useState(false);
+    var lastScroll = 0;
     const [box, setBox] = useState("toggle");
     const [ulBox, setUlBox] = useState("menu");
+
+  const [show, setShow] = useState(false)
+  const controlNavbar = () => {
+      if(window.scrollY < 20){
+        setShow(true)
+        document.getElementById("top").style.opacity = "1";
+        return
+      }
+    if (window.scrollY >= lastScroll ) {
+        setShow(true)
+        document.getElementById("top").style.opacity = "1";
+    }else{
+      setShow(false)
+      document.getElementById("top").style.opacity = "0";
+    }
+    lastScroll = window.scrollY;
+
+
+}
+
+  useEffect(() => {
+      window.addEventListener('scroll', controlNavbar)
+      return () => {
+          window.removeEventListener('scroll', controlNavbar)
+      }
+  }, [])
     const handleLogout = () => {
         dispatch({type: "LOGOUT"});
     }
@@ -24,7 +51,7 @@ export default function TopBar() {
         setToggled(!toggled)
     }
     return (
-        <div className="top">
+        <div className="top" id="top">
             <div className="topLeft">
                 <Link to="/" className="link logo">Andrew Nguyen</Link>
             </div>
@@ -39,12 +66,16 @@ export default function TopBar() {
                     <li className="topListItem">
                         <Link to="/contact" className="link">CONTACT</Link>
                     </li>
+                    {user && 
+                    <>
+
                     <li className="topListItem">
                         <Link to="/write" className="link">WRITE</Link>
                     </li>
-                    {user && <li className="topListItem" onClick={handleLogout}>
+                    <li className="topListItem" onClick={handleLogout}>
                        <a className="link">LOG OUT</a>
-                    </li>}
+                    </li>
+                    </>}
                 </ul>
             </div>
             <div className="topCenterSmall">
@@ -58,11 +89,12 @@ export default function TopBar() {
                     <li className="topListItem">
                         <Link to="/contact" className="link">CONTACT</Link>
                     </li>
+                    {user ?
+                    <> 
+
                     <li className="topListItem">
                         <Link to="/write" className="link">WRITE</Link>
                     </li>
-                    {user ?
-                    <> 
                     <li className="topListItem" onClick={handleLogout}>
                        <div className="link">LOG OUT</div>
                     </li>

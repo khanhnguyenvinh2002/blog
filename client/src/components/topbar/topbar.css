@@ -7,8 +7,8 @@
     display: flex;
     align-items: center;
     z-index: 999;
+    transition: opacity 0.5s ease-in-out;
 }
-
 .topLeft{
     flex: 3;
     display: flex;
@@ -35,14 +35,16 @@
 .menu li .link{
     padding: 10px 15px;
     color: #6c707c;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
+}
+.topCenterSmall .menu li .link{
+    color: white;
 }
 .logo{
     font-size: 26px;
     font-weight: bold;
     color: #6c707c;
-    font-family: Poppins;
 }
 .logo:hover{
     color: #17d1ac;
@@ -85,7 +87,7 @@
 }
 
 .topListItem{
-    margin-right: 20px;
+    margin: 0;
     font-size: 18px;
     font-weight: 300;
     cursor: pointer;
