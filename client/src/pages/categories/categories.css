@@ -1,0 +1,46 @@
+.categories{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.posts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.categoryName{
+
+    font-size: 28px;
+    line-height: 28px;
+    
+    margin: 20px 0;
+    color: #be9656;
+    font-weight: 300;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+.categoryItem{
+    margin: 12px 0;
+}
+
+.categoryList{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 12px;
+}
+
+.categoryListItem{
+    margin: 8px 4px;
+    font-size: 14px;
+    line-height: 28px;
+    color: #be9656;
+    font-weight: 300;
+    border: 1px solid #be9656;
+    border-radius: 20px;
+    padding: 5px 10px;
+}

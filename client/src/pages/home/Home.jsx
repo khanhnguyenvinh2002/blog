@@ -20,10 +20,12 @@ export default function Home() {
         <>
         <Header/>
         <div className="container">
-        <div className="home">
-            <Posts posts={posts}/>
-            <Sidebar/>
-        </div>
+            <div className="home">
+                <div className="posts col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <Posts posts={posts}/>
+                </div>
+                <Sidebar/>
+            </div>
         </div>
         </>
     )

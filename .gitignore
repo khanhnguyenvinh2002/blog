@@ -10,3 +10,5 @@ client/firebase.json
 client/.firebase
 
 TODO
+
+client/build

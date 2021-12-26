@@ -11,17 +11,25 @@ export default function About() {
     useEffect(()=>{
         fetch(AboutMarkdown).then(res => res.text()).then(text => setText(text));
     }, [])
-    function flatten(text, child) {
+    const flatten = (text, child) => {
         return typeof child === 'string'
           ? text + child
           : React.Children.toArray(child.props.children).reduce(flatten, text)
       }
       
-      function HeadingRenderer(props) {
+    const HeadingRenderer = (props) => {
         var children = React.Children.toArray(props.children)
         var text = children.reduce(flatten, '')
         var slug = text.toLowerCase().replace(/\W/g, '-')
         return React.createElement('h' + props.level, {id: slug}, props.children)
+    }
+
+    const LinkRenderer = (props: any) =>{
+        return (
+          <a href={props.href} target="_blank" rel="noreferrer">
+            {props.children}
+          </a>
+        );
       }
     return (
         <div className="about container">
@@ -36,7 +44,7 @@ export default function About() {
                 src={picture}
                 alt="" 
             />
-            <div className="aboutDesc">Picture description: my highschool graduation photo of me with the events' name card I have organized and the Maths medals I have received</div>
+            <div className="aboutDesc">Picture description: my highschool graduation photo of me with name cards for events I have organized and the maths and science medals I have won</div>
             {/* <Markdown 
                 className="aboutDesc" 
                 components={{h1: HeadingRenderer, h2: HeadingRenderer, h3: HeadingRenderer}}>
@@ -45,7 +53,7 @@ export default function About() {
 
             <Markdown 
                 className="aboutContent" 
-                components={{h1: HeadingRenderer, h2: HeadingRenderer, h3: HeadingRenderer}}>{text}</Markdown>   
+                components={{h1: HeadingRenderer, h2: HeadingRenderer, h3: HeadingRenderer, a: LinkRenderer}}>{text}</Markdown>   
             </div>
         </div>
     )

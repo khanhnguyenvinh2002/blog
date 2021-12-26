@@ -62,7 +62,7 @@ router.delete("/:id", async (req,res) => {
     }
 })
 
-//GET USER
+//GET POST BY ID
 router.get("/:id", async (req, res)=>{
     try{
         const post = await Post.findById(req.params.id);

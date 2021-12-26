@@ -103,8 +103,8 @@ export default function SinglePost() {
                 />}
                
                 <div className="singlePostCats">
-                    {post.categories?.map(c=>(
-                    <div className="singlePostCat">{c}</div>
+                    {post.categories?.map((c,i)=>(
+                        <Link to ={`/categories/#${c}`} title={c} key={i} rel="stylesheet" className="postCat link" key={i}>{c}</Link>
                     ))}
                 </div>
                 {updateMode ? 
@@ -128,8 +128,8 @@ export default function SinglePost() {
                 <button className="singlePostButton" onClick={handleUpdate}>Update</button>
                 }               
                 <ul className="pager">
-                  <li className="previous"><a className="link" href="#">Previous</a></li>
-                  <li className="next"><a className="link" href="#">Next</a></li>
+                  {post.prevId && <li className="previous"><a className="link" target="_blank" href={`/post/${post.nextId}`}>Previous</a></li>}
+                  {post.nextId && <li className="next"><a className="link" target="_blank"  href={`/post/${post.nextId}`}>Next</a></li>}
                 </ul>
             </div>
         </div>

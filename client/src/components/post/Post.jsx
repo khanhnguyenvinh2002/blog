@@ -14,7 +14,7 @@ export default function Post({post}) {
 
             {post.categories && post.categories.length > 0 && <div className="postCats">
                 {post.categories?.map((c,i)=>(
-                <div className="postCat" key={i}>{c}</div>
+                <Link to ={`/categories/#${c}`} title={c} key={i} rel="stylesheet" className="postCat link" key={i}>{c}</Link>
                 ))}
             </div>
             }

@@ -9,17 +9,25 @@ export default function Porfolio() {
     useEffect(()=>{
         fetch(PortfolioMarkdown).then(res => res.text()).then(text => setText(text));
     }, [])
-    function flatten(text, child) {
+    const flatten = (text, child) => {
         return typeof child === 'string'
           ? text + child
           : React.Children.toArray(child.props.children).reduce(flatten, text)
       }
       
-      function HeadingRenderer(props) {
+    const HeadingRenderer = (props) => {
         var children = React.Children.toArray(props.children)
         var text = children.reduce(flatten, '')
         var slug = text.toLowerCase().replace(/\W/g, '-')
         return React.createElement('h' + props.level, {id: slug}, props.children)
+    }
+
+    const LinkRenderer = (props: any) =>{
+        return (
+          <a href={props.href} target="_blank" rel="noreferrer">
+            {props.children}
+          </a>
+        );
       }
     return (
         <div className="portfolio container">
@@ -41,7 +49,7 @@ export default function Porfolio() {
 
             <Markdown 
                 className="portfolioContent" 
-                components={{h1: HeadingRenderer, h2: HeadingRenderer, h3: HeadingRenderer}}>{text}</Markdown>   
+                components={{h1: HeadingRenderer, h2: HeadingRenderer, h3: HeadingRenderer, a: LinkRenderer}}>{text}</Markdown>   
             </div>
         </div>
     )

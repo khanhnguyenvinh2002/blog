@@ -53,7 +53,6 @@ export default function Write() {
     }
     const handelSelect = (e)=>{
         setChosenCategories(Array.isArray(e)?e.map(x=> x.name):[])
-        console.log(e.map(x=> x.name))
     }
     return (
         <div className="write">

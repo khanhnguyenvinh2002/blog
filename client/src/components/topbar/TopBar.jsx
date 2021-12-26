@@ -55,7 +55,7 @@ export default function TopBar() {
             <div className="topLeft">
                 <Link to="/" className="link logo">Andrew Nguyen</Link>
             </div>
-            <div className="topCenter">
+            <div className="topRight">
                 <ul className={ulBox}>
                     <li className="topListItem">
                         <Link to="/" className="link">HOME</Link>
@@ -64,7 +64,10 @@ export default function TopBar() {
                         <Link to="/about" className="link">ABOUT</Link>
                     </li>
                     <li className="topListItem">
-                        <Link to="/contact" className="link">CONTACT</Link>
+                        <Link to="/portfolio" className="link">PORTFOLIO</Link>
+                    </li>
+                    <li className="topListItem">
+                        <Link to="/categories" className="link">CATEGORY</Link>
                     </li>
                     {user && 
                     <>
@@ -87,9 +90,12 @@ export default function TopBar() {
                         <Link to="/about" className="link">ABOUT</Link>
                     </li>
                     <li className="topListItem">
-                        <Link to="/contact" className="link">CONTACT</Link>
+                        <Link to="/portfolio" className="link">PORTFOLIO</Link>
                     </li>
-                    {user ?
+                    <li className="topListItem">
+                        <Link to="/categories" className="link">CATEGORY</Link>
+                    </li>
+                    {/* {user ?
                     <> 
 
                     <li className="topListItem">
@@ -108,10 +114,10 @@ export default function TopBar() {
                     <li className="topListItem">
                         <Link to="/login" className="link">LOGIN</Link>
                     </li>)
-                   }
+                   } */}
                 </ul>
             </div>
-            <div className="topRight deletable">
+            {/* <div className="topRight deletable">
                 {user? (
 
                 <Link to="/settings">
@@ -125,7 +131,7 @@ export default function TopBar() {
                     </li>
                 </ul>
                 )}
-            </div>
+            </div> */}
             <div className={box} onClick={handleToggle}></div>
         </div>
     )

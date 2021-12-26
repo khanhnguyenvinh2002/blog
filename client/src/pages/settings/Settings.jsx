@@ -15,7 +15,6 @@ export default function Settings() {
     const {user, dispatch} = useContext(Context);
 
     const handleSubmit = async (e)=> {
-        console.log("in")
         dispatch({type:"UPDATE_START"});
         e.preventDefault();
         const updatedUser = {
