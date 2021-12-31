@@ -33,7 +33,7 @@ export default function Porfolio() {
         <div className="portfolio container">
             <div className="portfolioWrapper">
             <h2 className="portfolioTitle">
-           Khanh Nguyen's portfolio
+           Andrew Nguyen's portfolio
 
             </h2>
             {/* <img 

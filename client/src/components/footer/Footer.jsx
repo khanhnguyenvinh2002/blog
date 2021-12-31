@@ -43,16 +43,7 @@ export default function Footer() {
                      <p className="copyright text-footer">
                          Copyright &copy; Andrew Nguyen 2021 
                          <br/>
-                         Created by <a className="footer-a" href="https://www.facebook.com/andrewng2002">Andrew</a> 
-                         <span style={{display: "inline-block", margin: "0 5px"}}>
-                             <i className="fa fa-heart"></i>
-                         </span> 
-                         from <a className="footer-a" href="https://github.com/khanhnguyenvinh2002">Brandeis University</a> | 
-                         {/* <iframe
-                             style="margin-left: 2px; margin-bottom:-5px;"
-                             frameborder="0" scrolling="0" width="91px" height="20px"
-                             src="https://ghbtns.com/github-btn.html?user=QuangNg14&repo=TechBlog&type=star&count=true" >
-                         </iframe> */}
+                         Created by <a className="footer-a link" href="https://www.facebook.com/andrewng2002">Andrew Nguyen</a> 
                      </p>
                  </div>
              </div>
