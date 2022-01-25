@@ -22,13 +22,6 @@ export default function Porfolio() {
         return React.createElement('h' + props.level, {id: slug}, props.children)
     }
 
-    const LinkRenderer = (props: any) =>{
-        return (
-          <a href={props.href} target="_blank" rel="noreferrer">
-            {props.children}
-          </a>
-        );
-      }
     return (
         <div className="portfolio container">
             <div className="portfolioWrapper">
@@ -49,7 +42,7 @@ export default function Porfolio() {
 
             <Markdown 
                 className="portfolioContent" 
-                components={{h1: HeadingRenderer, h2: HeadingRenderer, h3: HeadingRenderer, a: LinkRenderer}}>{text}</Markdown>   
+                components={{h1: HeadingRenderer, h2: HeadingRenderer, h3: HeadingRenderer}}>{text}</Markdown>   
             </div>
         </div>
     )

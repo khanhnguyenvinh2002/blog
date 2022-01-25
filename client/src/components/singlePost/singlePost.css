@@ -7,6 +7,10 @@
     flex-direction: column;
 }
 
+.container{
+    padding: 15px;
+}
+
 .singlePostTitle{
     margin: 0;
     margin-top: 30px;

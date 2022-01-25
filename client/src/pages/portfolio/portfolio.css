@@ -1,10 +1,14 @@
 /* .portfolio{
 
 } */
+
 .portfolioWrapper{
     padding: 0;
     display: flex;
     flex-direction: column;
+}
+.container{
+    padding: 15px;
 }
 
 .portfolioTitle{
