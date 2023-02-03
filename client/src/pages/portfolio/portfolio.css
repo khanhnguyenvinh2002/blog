@@ -156,8 +156,12 @@ img{
     object-fit: contain;
 }
 h1{
-    font-weight: 800;
+    font-weight: 700;
     font-size: 2em;
+}
+h2{
+    font-weight: 600;
+    font-size: 1.25em;
 }
 @media (max-width: 800px){
 .portfolioContent {

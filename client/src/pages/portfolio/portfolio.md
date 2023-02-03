@@ -1,18 +1,148 @@
 
 
-My name is Khanh (Andrew) Nguyen. I am currently a sophomore majoring in Computer Science and Business at Brandeis University. My goal with coding is to create applications that can solve ongoing issues in the world and help reshape how people live and work. I have experience in fullstack development in both web and mobile. I have developed applications in various fields ranging from education to social media. My portfolio represents what I have accomplished as a computer science major and a technology enthusiast. Welcome to my portfolio!
+My name is Khanh (Andrew) Nguyen. Let's reshape the world together. Hit me up if you find anything interesting here!
 
+*Last updated: Feb 3 2023*
 # Table of contents
-1. [Word Connecting Game](#word-connecting)
-2. [Blog](#my-blog)
-3. [Find My Major Mobile Application](#find-my-major)
-4. [Car Helper Start-up Project](#car-helper)
-5. [Giant Steps Investment Platform](#giant-steps)
-6. [Realtime Chat App](#realtime-chat-app)
-7. [Coffee Venture Social Media Platform](#coffee-venture)
-8. [Monster Shooter Game](#monster-shooter)
 
-# Word Connecting
+- ## [I. Professional Experience](#professional-experience)  
+    - [IMC Trading Incoming SWE Intern](#imc-trading)    
+    - [CommScope SWE Intern](#commscope)    
+    - [Google Software Product Sprint](#google-software-product-sprint)   
+    - [FPT Information System SWE Intern](#fpt-information-system)   
+    - [Brandeis Teaching Assistant](#teaching-assistant)   
+    - [Brandeis ITS Data Science Intern](#its-data-science-intern)    
+
+- ## [II. Startup Journey](#startup-journey)
+    - [Hyper Edge](#hyper-edge)    
+    - [Auturn Mobile App Engineer](#auturn)    
+    - [Infinity Cube Supply Chain Solution](#infinity-cube-supply-chain-solution)   
+    - [Giant Steps Investment Platform](#giant-steps)   
+
+- ## [III. Projects](#projects)
+    - [Nano Twitter](#nano-twitter)
+    - [Word Connecting Game](#word-connecting)
+    - [Blog](#my-blog)
+    - [Find My Major Mobile Application](#find-my-major)
+    - [Car Helper](#car-helper)
+    - [Realtime Chat App](#realtime-chat-app)
+    - [Coffee Venture Social Media Platform](#coffee-venture)
+    - [Monster Shooter Game](#monster-shooter)
+
+# Professional Experience
+
+## IMC Trading
+
+Incoming SWE Intern
+*More about this soon!*
+
+## CommScope
+
+SWE Intern 
+Team: Collaborated with 8 other engineers to develop an application to manage and optimize DOCSIS 3.1 networks 
+*Technology used: Spring Framework, Java, Kotlin, SingleStore, Python, Jira, Bitbucket* 
+
+- Summer 2022 (May 2022 - Aug 2022):
+    - Developed 5 APIs and optimized processing time by 60% by testing SQL queries on 10+ tables
+    - Tested 10+ APIs weekly; generated 6 different scenarios to enhance validation accuracy by writing Python scripts 
+    - Increased scale testing performance over 20 times by altering database indexes to maximize usage of all table partitions, separating the process to a multi-threading micro-service, and testing under scale conditions
+    - *got internship return offer for fall 2022*
+
+- Fall 2022 (Sep 2022 - Dec 2022) 
+    - Reduced JSON data file size by 75% (from 191KB to 48KB) by converting data from array to string format
+    - Eliminated manual errors by creating Python scripts to automatically update JSON files with the latest-version data
+    - Improved the efficiency and accuracy of all application message processing by implementing an automated validation system using RabbitMQ, configurable delays, and data confirmation across 40+ tables
+
+## Google Software Product Sprint
+
+Scholar 
+Team: Collaborated with 2 other developers
+*Technology used: Java, Java Servlet, Bootstrap, HTML/CSS, Git* 
+
+- Summer 2022:
+    - Helped college students find affordable necessary items by building a full-stack website
+    - Integrated Google Maps and Cloud Datastore into the application and deployed to Google Cloud Platform
+
+## FPT Information System
+
+SWE Intern 
+Team: Collaborated with 7 engineers to integrate ERP systems for 2 Vietnamese firms – FPT and Vietlott
+*Technology used: Angular, C#, .NET, MySQL, UI/UX design, Git, HTML/SASS, Jira* 
+
+- Fall 2020 + Spring 2021 + Summer 2021 (Nov 2020 - Aug 2021)
+    - Reduced 40% management task time and enhanced security control by building a role management system with role-based and jwt authorization
+    - Redesigned operation and module management system
+    - Designed and integrated document management and exporting service for 50 internal APIs
+    - Incorporated an API management system for 40 external APIs by reading, reformatting, and exporting the data
+    - Developed and frequently debugged 20+ business modules covering functionalities such as user and inventory management and financial reporting; worked with the Quality Assurance team to support the deployment
+
+## Teaching Assisstant
+Course: 12b - Advanced programming language in Java
+
+## ITS Data Science Intern
+Summer 2022
+Participating in a pilot group of 4 students to apply data science techniques on data sets for 5 Brandeis departments
+
+# Startup Journey
+
+## Auturn
+App developer and Embedded Engineer
+
+*more description coming soon*
+
+## Hyper Edge
+
+Got accepted into Stanford Blockchain Acceleration Program
+*more description coming soon*
+
+## Infinity Cube Supply Chain Solution
+
+Participated in Solana Riptide Hackathon
+
+Team: 3 devs
+
+![Image of riptide hackathon](https://solana.com/social/riptide-social-share.png)
+
+- Period: March 2022 
+
+- Goals: With our platform, Suppliers and Big and small alike can generate Batches of QR codes embedded with items' information. Then their derived address is pushed to the blockchain; upon scanning the QR code at a point where Goods transfers hands in the supply chain or checkpoint, our smart contract mints one SPL token. The validator verifies that the item is authentic and comes from the correct wallet address and that it's original; it has never been scanned before. If successful, the geolocation of the scan is uploaded, and now the code has been, it cannot be scanned again as it has already passed that point in the supply chain. 
+
+- Technical details:
+    - I designed and developed the web with Web3JS, React with TypeScript
+    - Vadim is the main person in charge of developing Solana smart contract. I also supported him with developing and debugging.
+- Results:
+    - We collaborated super smoothly and were able to to pull the project off within 1 week (incredible! right?) (the hackathon allows almost 2 months to develop but we knew about it too late)
+
+## Giant Steps
+
+- Contacts: I am the developer of the team. Other members include Abel: founder, Zev: UI designer, Marco: marketer.
+
+![Image of Giant Steps website](https://user-images.githubusercontent.com/74166827/147381865-fd8283aa-2c82-408c-ba5e-a309b45ff850.png)
+
+- Period: May 2021 - November 2021
+
+- Goals: Giant Steps aims at investing in small musicians and making money as those musicians succeed. The goal is to create a landing page to collect user information. First try at start-up!
+
+- Technical details:
+    - I designed the website based on the given design with React and linked it with Google Sheets.
+
+- Results: 
+    - Try it out [here!](https://giantsteps.studio)
+    - Website code can be found [here](https://github.com/khanhnguyenvinh2002/giant-steps-web)
+
+# Projects
+
+## Nano Twitter
+
+Team: class project, led a team of 3 developers
+
+![Image of nanotwitter](https://www.sundayguardianlive.com/wp-content/uploads/2020/07/Abhin-Twitter-response-edied.jpg)
+
+- Designed and developed a full-stack baby version of Twitter with all the core components and functionalities
+- Reduced error rate during scale testing from 50% at 875 concurrent users to 6.7% at 4600 concurrent users using database denormalization, a 2-layered Redis cache, and a “fanout” service
+- Achieved the best performance in class final mock scale test in terms of average response rate and error rate
+
+## Word Connecting
 
 -Contacts: I developed this project all by myself
 
@@ -30,7 +160,7 @@ My name is Khanh (Andrew) Nguyen. I am currently a sophomore majoring in Compute
     - Try it out [here!](https://word-connecting.web.app)
     - Code can be found [here](https://github.com/khanhnguyenvinh2002/word-connecting)
 
-# My Blog
+## My Blog
 
 - Contacts: I developed this project all by myself
 
@@ -48,7 +178,7 @@ My name is Khanh (Andrew) Nguyen. I am currently a sophomore majoring in Compute
 - Results: 
     - App code can be found [here](https://github.com/khanhnguyenvinh2002/blog)
 
-# Find My Major
+## Find My Major
 
 - Contacts: I developed this project all by myself
 
@@ -65,7 +195,7 @@ My name is Khanh (Andrew) Nguyen. I am currently a sophomore majoring in Compute
     - App code can be found [here](https://github.com/khanhnguyenvinh2002/findMyMajor)
     - I am collecting feedback from students and academic advisors to develop future functionalities.
 
-# Car Helper
+## Car Helper
 
 - Contacts: I am the developer of the team. Other members include Yixing Tang and Zheng Zheng who worked on business analytic.
 
@@ -83,27 +213,10 @@ My name is Khanh (Andrew) Nguyen. I am currently a sophomore majoring in Compute
     - Website code can be found [here](https://github.com/khanhnguyenvinh2002/car-helper)
     - We have developed various business plans and the website was useful in collecting customers' information.
 
-# Giant Steps
 
-- Contacts: I am the developer of the team. Other members include Abel: founder, Zev: UI designer, Marco: marketer.
+## Realtime chat app
 
-![Image of Giant Steps website](https://user-images.githubusercontent.com/74166827/147381865-fd8283aa-2c82-408c-ba5e-a309b45ff850.png)
-
-- Period: May 2021 - November 2021
-
-- Goals: Giant Steps aims at investing in small musicians and making money as those musicians succeed. The goal is to create a landing page to collect user information 
-
-- Technical details:
-    - I designed the website based on the given design with React and linked it with Google Sheets.
-
-- Results: 
-    - Try it out [here!](https://giantsteps.studio)
-    - Website code can be found [here](https://github.com/khanhnguyenvinh2002/giant-steps-web)
-    - We collected a lot of contact information and are planning the next steps for our project.
-
-# Realtime chat app
-
-- Contacts: I developed this project all by myself.
+Personal project
 
 - Period: September 2020
 
@@ -115,7 +228,7 @@ My name is Khanh (Andrew) Nguyen. I am currently a sophomore majoring in Compute
 - Results: 
     - Code can be found [here](https://github.com/khanhnguyenvinh2002/chat-app-angular)
 
-# Coffee Venture
+## Coffee Venture
 
 - Contacts: I developed this project all by myself.
 
@@ -137,7 +250,7 @@ My name is Khanh (Andrew) Nguyen. I am currently a sophomore majoring in Compute
     - I learned project organization skills, project management skills, and debugging skills.
     - I am developing new functionalities based on feedback I received and I am planning to officially launch the platform when the COVID-19 situation is better in Vietnam.
 
-# Monster shooter
+## Monster shooter
 
 - Contacts: I developed this project all by myself.
 
